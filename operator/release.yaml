@@ -27,7 +27,8 @@ spec:
     service:
       type: ClusterIP
     serviceAccount:
-      name: sample-weblogic-operator-sa
+      create: false
+      name: "sample-weblogic-operator-sa"
     enableClusterRoleBinding: 
       value: true
     domainNamespaceSelectionStrategy:
