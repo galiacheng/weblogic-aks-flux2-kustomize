@@ -29,6 +29,7 @@ spec:
     serviceAccount:
       create: false
       name: "sample-weblogic-operator-sa"
+      namespace: "sample-weblogic-operator-ns"
     enableClusterRoleBinding: 
       value: true
     domainNamespaceSelectionStrategy:
