@@ -13,6 +13,7 @@ metadata:
   name: weblogic-operator
   namespace: sample-weblogic-operator-ns
 spec:
+  releaseName: weblogic-operator
   chart:
     spec:
       chart: weblogic-operator
@@ -26,4 +27,11 @@ spec:
     service:
       type: ClusterIP
     serviceAccount:
-      create: true
+      name: sample-weblogic-operator-sa
+    enableClusterRoleBinding: 
+      value: true
+    domainNamespaceSelectionStrategy:
+      value: "LabelSelector"
+    domainNamespaceLabelSelector:
+      value: "weblogic-operator=enabled"
+    

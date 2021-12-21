@@ -3,4 +3,5 @@ kind: Kustomization
 namespace: sample-weblogic-operator-ns
 resources:
   - namespace.yaml
+  - serviceaccount.yaml
   - release.yaml
