@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: weblogic-operator-chart
+  name: weblogic-operator
   namespace: sample-weblogic-operator-ns
 spec:
   url: https://oracle.github.io/weblogic-kubernetes-operator/charts
@@ -15,10 +15,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: weblogic-operator/weblogic-operator
+      chart: weblogic-operator
       sourceRef:
         kind: HelmRepository
-        name: weblogic-operator-chart
+        name: weblogic-operator
         namespace: sample-weblogic-operator-ns
       version: "3.3.6"
   interval: 1m
