@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/galiacheng/weblogic-flux2-kustomize
+  url: ssh://git@github.com/galiacheng/weblogic-aks-flux2-kustomize
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
