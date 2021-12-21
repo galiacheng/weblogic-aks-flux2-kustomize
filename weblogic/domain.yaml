@@ -141,5 +141,3 @@ spec:
     # (the model yaml in the optional configMap or in the image)
     #secrets:
     #- sample-domain1-datasource-secret
-  decryption:
-    provider: sops​
