@@ -24,6 +24,7 @@ spec:
       version: "3.3.6"
   interval: 1m
   values:
+    namespace: "sample-weblogic-operator-ns"
     service:
       type: ClusterIP
     serviceAccount:
