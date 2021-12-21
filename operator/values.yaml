@@ -1,0 +1,4 @@
+serviceAccount: "sample-weblogic-operator-sa"
+enableClusterRoleBinding: true
+domainNamespaceSelectionStrategy: "LabelSelector"
+domainNamespaceLabelSelector: "weblogic-operator=enabled"
