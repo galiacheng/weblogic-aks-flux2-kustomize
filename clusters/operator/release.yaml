@@ -21,6 +21,7 @@ spec:
         kind: HelmRepository
         name: weblogic-operator
         namespace: sample-weblogic-operator-ns
+      version: "3.3.7"
   interval: 10080m  # 7 days
   install:
     remediation:
