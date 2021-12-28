@@ -6,3 +6,5 @@ resources:
   - weblogic-account-secret.yaml
   - wdt-runtime-secret.yaml
   - domain.yaml
+  - ingress-admin.yaml
+  - ingress-cluster.yaml
