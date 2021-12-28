@@ -5,7 +5,7 @@ metadata:
   namespace: sample-weblogic-operator-ns
 spec:
   url: https://oracle.github.io/weblogic-kubernetes-operator/charts
-  interval: 10080m  # 7 days
+  interval: 10080m
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
@@ -22,7 +22,7 @@ spec:
         name: weblogic-operator
         namespace: sample-weblogic-operator-ns
       version: "3.3.7"
-  interval: 10080m  # 7 days
+  interval: 10080m
   install:
     remediation:
       retries: 3
