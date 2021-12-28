@@ -20,6 +20,7 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: ingress-basic
+      version: "3.3.7"
   interval: 10080m  # 7 days
   install:
     remediation:
