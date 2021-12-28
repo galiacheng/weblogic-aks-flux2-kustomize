@@ -22,10 +22,11 @@ spec:
         name: weblogic-operator
         namespace: sample-weblogic-operator-ns
       version: "3.3.6"
-      valuesFiles:
-        - values.yaml
   interval: 1m
   values:
     service:
       type: ClusterIP
-    
+    serviceAccount: "sample-weblogic-operator-sa"
+    enableClusterRoleBinding: true
+    domainNamespaceSelectionStrategy: "LabelSelector"
+    domainNamespaceLabelSelector: "weblogic-operator=enabled"
