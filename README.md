@@ -1,6 +1,6 @@
 # GitOps sample for running Oracle WebLogic Server on Azure Kubernetes Service cluster
 
-This example is using Flux and Kustomize to create and manage Oracle WebLogic Cluster on Azure Kubernetes Service cluster automatically.
+This sample is using Flux and Kustomize to create and manage Oracle WebLogic Cluster on Azure Kubernetes Service cluster automatically.
 
 We will configure Flux:
 
@@ -309,7 +309,7 @@ ingress-sample-domain1-cluster-cluster-1   <none>   *       20.124.73.73   80   
 Access the Administration Server with the ADDRESS of ingress:
 
 ```
-$ curl http://<ingress-address>/console/
+$ curl http://<ingress-address>/console/ --verbose
 *   Trying 20.124.73.73:80...
 * TCP_NODELAY set
 * Connected to 20.124.73.73 (20.124.73.73) port 80 (#0)
