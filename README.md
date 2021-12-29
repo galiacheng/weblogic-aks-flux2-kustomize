@@ -16,7 +16,7 @@ We will configure Flux:
    - [Prerequisites](#prerequisites)
    - [Bootstrap](#bootstrap)
    - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
- - [Use GitOps in Azure Acr](azure-arc-gitops/README.md)
+ - [Use GitOps in Azure Acr-enabled Kubernetes](azure-arc-gitops/README.md)
 
 
 ## Prerequisites
