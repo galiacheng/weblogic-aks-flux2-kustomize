@@ -7,7 +7,7 @@ spec:
   url: https://oracle.github.io/weblogic-kubernetes-operator/charts
   interval: 10m
 ---
-apiVersion: helm.fluxcd.io/v1
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: weblogic-operator
