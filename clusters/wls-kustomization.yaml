@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: weblgic-sample-domain1
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: weblogic-operator
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./weblogic
+  prune: true
+  wait: true
