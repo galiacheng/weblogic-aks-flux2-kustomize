@@ -1,4 +1,4 @@
-# GitOps sample for running Oracle WebLogic Server on Azure Kubernetes Service cluster
+# GitOps sample for running Oracle WebLogic Server on Azure Kubernetes Service
 
 This sample is using Flux and Kustomize to create and manage Oracle WebLogic Cluster on Azure Kubernetes Service cluster automatically.
 
