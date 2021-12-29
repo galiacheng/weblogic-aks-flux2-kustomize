@@ -23,7 +23,6 @@ spec:
         namespace: sample-weblogic-operator-ns
       version: "v3.3.6"
   interval: 1m
-  wait: true
   values:
     serviceAccount: "sample-weblogic-operator-sa"
     enableClusterRoleBinding: true
