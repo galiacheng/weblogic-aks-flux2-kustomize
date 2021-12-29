@@ -53,8 +53,8 @@ Watch for resources being deployed:
 ```
 $ kubectl get pod -A -w
 
-<... kube-system ..>
-<... flux-system ..>
+<... kube-system ...>
+<... flux-system ...>
 sample-weblogic-operator-ns   weblogic-operator-744cfc8694-262cz         0/1     Pending             0          0s
 sample-weblogic-operator-ns   weblogic-operator-744cfc8694-262cz         0/1     Pending             0          0s
 sample-weblogic-operator-ns   weblogic-operator-744cfc8694-262cz         0/1     ContainerCreating   0          0s
