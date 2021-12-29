@@ -10,6 +10,13 @@ We will configure Flux:
 
  - To deploy Oracle WebLogic Server with model in image, create ingresses for the Administration Server and the cluster. Flux will monitor this repository, and it will automatically upgrade all the resource based on source code changes in clusters folder.
 
+ ## Contents
+
+ - [Prerequisites](#prerequisites)
+ - [Bootstrap Locally](#bootstrap)
+ - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
+ - [Use GitOps in Azure Acr](azure-arc-gitops/README.md)
+
 
 ## Prerequisites
 
