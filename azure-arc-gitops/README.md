@@ -17,7 +17,7 @@ You are able to create the GitOps using the Azure portal.
     ![Create GitOps in Azure Arc-enabled AKS cluster](resources/screenshot-gitops-create.png)
 
 - **Basics**
-  - **Configurations name**: input a name identifying your deployment, here uses `weblogic`
+  - **Configurations name**: input a name identifying your deployment, here uses `deploy-wls`
     
   - **Operator Details**: configuration for Flux operator
     - **Namespace**: `flux-system`, to keep the sample with Flux CLI.
