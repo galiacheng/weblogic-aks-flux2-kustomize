@@ -24,6 +24,7 @@ spec:
       version: "v3.3.6"
   interval: 1m
   values:
+    replicaCount: 1
     serviceAccount: "sample-weblogic-operator-sa"
     enableClusterRoleBinding: true
     domainNamespaceSelectionStrategy: "LabelSelector"
