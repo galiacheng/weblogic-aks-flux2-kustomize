@@ -226,26 +226,7 @@ Watch for resources being deployed:
 $ kubectl get pod -A -w
 
 <... kube-system ..>
-flux-system   helm-controller-779b58df6b-wznvx      0/1     Pending   0          0s
-flux-system   helm-controller-779b58df6b-wznvx      0/1     Pending   0          0s
-flux-system   helm-controller-779b58df6b-wznvx      0/1     ContainerCreating   0          0s
-flux-system   kustomize-controller-5db6bfc56d-lqbrk   0/1     Pending             0          0s
-flux-system   kustomize-controller-5db6bfc56d-lqbrk   0/1     Pending             0          0s
-flux-system   kustomize-controller-5db6bfc56d-lqbrk   0/1     ContainerCreating   0          0s
-flux-system   notification-controller-7ccfbfbb98-c2flf   0/1     Pending             0          0s
-flux-system   notification-controller-7ccfbfbb98-c2flf   0/1     Pending             0          0s
-flux-system   notification-controller-7ccfbfbb98-c2flf   0/1     ContainerCreating   0          0s
-flux-system   source-controller-565f8fbbff-5f52g         0/1     Pending             0          0s
-flux-system   source-controller-565f8fbbff-5f52g         0/1     Pending             0          0s
-flux-system   source-controller-565f8fbbff-5f52g         0/1     ContainerCreating   0          0s
-flux-system   helm-controller-779b58df6b-wznvx           0/1     Running             0          5s
-flux-system   helm-controller-779b58df6b-wznvx           1/1     Running             0          5s
-flux-system   notification-controller-7ccfbfbb98-c2flf   0/1     Running             0          4s
-flux-system   notification-controller-7ccfbfbb98-c2flf   1/1     Running             0          4s
-flux-system   kustomize-controller-5db6bfc56d-lqbrk      0/1     Running             0          5s
-flux-system   kustomize-controller-5db6bfc56d-lqbrk      1/1     Running             0          5s
-flux-system   source-controller-565f8fbbff-5f52g         0/1     Running             0          10s
-flux-system   source-controller-565f8fbbff-5f52g         1/1     Running             0          10s
+<... flux-system ..>
 sample-weblogic-operator-ns   weblogic-operator-744cfc8694-262cz         0/1     Pending             0          0s
 sample-weblogic-operator-ns   weblogic-operator-744cfc8694-262cz         0/1     Pending             0          0s
 sample-weblogic-operator-ns   weblogic-operator-744cfc8694-262cz         0/1     ContainerCreating   0          0s
@@ -305,7 +286,10 @@ sample-domain1-ns             sample-domain1-managed-server1             1/1    
 sample-domain1-ns             sample-domain1-managed-server2             1/1     Running             0          71s
 ```
 
-Verify that the Administration Server and the demo app can be accessed via ingress:
+Verify that the Administration Server and the demo app can be accessed via ingress.
+
+
+You should find two ingresses, for the Administration Server and applications in the cluster.
 
 ```
 $ kubectl get ingress -n sample-domain1-ns
