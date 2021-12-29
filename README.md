@@ -12,9 +12,10 @@ We will configure Flux:
 
  ## Contents
 
- - [Prerequisites](#prerequisites)
- - [Bootstrap Locally](#bootstrap)
- - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
+ - [Use Flux CLI](#bootstrap)
+   - [Prerequisites](#prerequisites)
+   - [Bootstrap](#bootstrap)
+   - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
  - [Use GitOps in Azure Acr](azure-arc-gitops/README.md)
 
 
