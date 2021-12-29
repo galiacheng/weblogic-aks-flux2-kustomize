@@ -7,7 +7,7 @@ spec:
   url: https://oracle.github.io/weblogic-kubernetes-operator/charts
   interval: 10m
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: weblogic-operator
@@ -23,6 +23,7 @@ spec:
         namespace: sample-weblogic-operator-ns
       version: "v3.3.6"
   interval: 1m
+  wait: true
   values:
     serviceAccount: "sample-weblogic-operator-sa"
     enableClusterRoleBinding: true
