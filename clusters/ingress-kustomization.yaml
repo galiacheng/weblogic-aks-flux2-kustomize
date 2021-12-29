@@ -1,16 +1,14 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: weblgic-sample-domain1
+  name: ingress-ngix
   namespace: flux-system
 spec:
-  dependsOn:
-    - name: weblogic-operator
-    - name: ingress-ngix
-  interval: 5m
+  interval: 10m
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./weblogic
+  path: ./ingress
   prune: true
   wait: true
+  timeout: 30m
