@@ -379,5 +379,7 @@ $ curl http://<ingress-address>/applications/testwebapp/ --verbose
 * Connection #0 to host 20.124.73.73 left intact
 ```
 
-## Encrypt Kubernetes using SOPS and Azure Key Vault
-WIP
+## Encrypt Kubernetes Secret using SOPS and Azure Key Vault
+
+If you want to enhance the sample for development/test/production senarios, 
+you are able to [encrypt Kubernetes Secret using SOPS and Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-global/gitops-and-secret-management-with-aks-flux-cd-sops-and-azure-key/ba-p/2280068).
