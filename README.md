@@ -12,7 +12,7 @@ We will configure Flux:
 
  ## Contents
 
- - [Use Flux CLI](#bootstrap)
+ - [Use Flux CLI](#prerequisites)
    - [Prerequisites](#prerequisites)
    - [Bootstrap](#bootstrap)
    - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
