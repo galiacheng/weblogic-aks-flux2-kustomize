@@ -1,12 +1,12 @@
 # GitOps sample for running Oracle WebLogic Server on Azure Kubernetes Service cluster
 
-This example is to Flux and Kustomize to create and manage Oracle WebLogic Cluster on Azure Kubernetes Service cluster automatically.
+This example is using Flux and Kustomize to create and manage Oracle WebLogic Cluster on Azure Kubernetes Service cluster automatically.
 
 We will configure Flux:
 
  - To install Oracle WebLogic Kubernetes Operator using HelmRepository and HelmRelease custom resources. Flux will monitor the Helm repository, and it will automatically upgrade the Helm releases to their latest chart version based on semver ranges.
 
- - To install Ingress NGIX using HelmRepository and HelmRelease custom resources. Flux will monitor the Helm repository, and it will automatically upgrade the Helm releases to their latest chart version based on semver ranges.
+ - To install NGINX controller using HelmRepository and HelmRelease custom resources. Flux will monitor the Helm repository, and it will automatically upgrade the Helm releases to their latest chart version based on semver ranges.
 
  - To deploy Oracle WebLogic Server with model in image, create ingresses for the Administration Server and the cluster. Flux will monitor this repository, and it will automatically upgrade all the resource based on source code changes in clusters folder.
 
@@ -141,7 +141,7 @@ In **clusters/ingress-kustomization.yaml**, we have a HelmRelease for NGINX ingr
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: ingress-ngix
+  name: ingress-nginx
   namespace: flux-system
 spec:
   interval: 10m
@@ -165,7 +165,7 @@ metadata:
 spec:
   dependsOn:
     - name: weblogic-operator
-    - name: ingress-ngix
+    - name: ingress-nginx
   interval: 5m
   sourceRef:
     kind: GitRepository
@@ -175,7 +175,7 @@ spec:
   wait: true
 ```
 
-Note that the WebLogic Server resources depend on the WebLogic operator and NGNIX ingress controller.
+Note that the WebLogic Server resources depend on the WebLogic operator and NGINX ingress controller.
 
 ## Bootstrap 
 
