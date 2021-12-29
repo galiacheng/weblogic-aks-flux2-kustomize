@@ -20,7 +20,7 @@ spec:
   domainHome: /u01/domains/sample-domain1
 
   # The WebLogic Server image that the Operator uses to start the domain
-  image: "acr1640762171.azurecr.io/wlsonaks:v1.0.0"
+  image: "docker.io/sleepycat2/weblogic-samples:wlsonaks"
 
   # Defaults to "Always" if image tag (version) is ':latest'
   imagePullPolicy: "IfNotPresent"
