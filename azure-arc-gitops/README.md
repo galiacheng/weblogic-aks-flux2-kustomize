@@ -6,7 +6,7 @@ This document guides you to set up GitOps with Flux v2 in Azure Arc-enabled Kube
 
 ## Prerequisites
 
-- An Azure Arc-enabled Kubernetes connected cluster that's up and running.
+- An Azure Arc-enabled Kubernetes connected cluster that's up and running. See [Azure Arc-enabled Kubernetes](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/) for more information.
  
 ## Create GitOps from Azure portal
 
