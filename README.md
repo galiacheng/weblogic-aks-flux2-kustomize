@@ -15,8 +15,9 @@ We will configure Flux:
  - [Use Flux CLI](#prerequisites)
    - [Prerequisites](#prerequisites)
    - [Bootstrap](#bootstrap)
-   - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
- - [Use GitOps in Azure Acr-enabled Kubernetes](azure-arc-gitops/README.md)
+   - [Demo Video](#demo-video)
+ - [Use GitOps in Azure Acr-enabled Kubernetes](resources/docs/azure-arc-gitops.md)
+ - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
 
 
 ## Prerequisites
@@ -378,6 +379,10 @@ $ curl http://<ingress-address>/applications/testwebapp/ --verbose
 </html>
 * Connection #0 to host 20.124.73.73 left intact
 ```
+
+## Demo Video
+
+[![Run this sample using Flux CLI]]({https://github.com/galiacheng/weblogic-aks-flux2-kustomize/resources/medias/flux-cli.mp4} "Run this sample using Flux CLI")
 
 ## Encrypt Kubernetes Secret using SOPS and Azure Key Vault
 
