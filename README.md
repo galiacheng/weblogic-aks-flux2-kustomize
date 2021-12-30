@@ -226,7 +226,18 @@ flux bootstrap github \
 
 The bootstrap command commits the manifests for the Flux components in clusters/flux-system dir and creates a deploy key with read-only access on GitHub, so it can pull changes inside the cluster.
 
-Watch for the Helm releases being install:
+Watch for kustomization being installed:
+
+```
+$ flux get kustomization
+
+NAME                            READY   MESSAGE                                                         REVISION                                        SUSPENDED
+ingress-nginx                   True    Applied revision: main/3c79dab78aa26ff47bf9971cb8964d8fbd3170af main/3c79dab78aa26ff47bf9971cb8964d8fbd3170af   False
+weblgic-sample-domain1          True    Applied revision: main/3c79dab78aa26ff47bf9971cb8964d8fbd3170af main/3c79dab78aa26ff47bf9971cb8964d8fbd3170af   False
+weblogic-operator               True    Applied revision: main/3c79dab78aa26ff47bf9971cb8964d8fbd3170af main/3c79dab78aa26ff47bf9971cb8964d8fbd3170af   False
+```
+
+Watch for the Helm releases being installed:
 
 ```
 $ watch flux get helmreleases --all-namespaces
