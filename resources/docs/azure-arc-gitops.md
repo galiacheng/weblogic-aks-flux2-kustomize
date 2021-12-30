@@ -4,6 +4,14 @@ This sample is using Flux and Kustomize to create and manage Oracle WebLogic Clu
 
 This document guides you to set up GitOps with Flux v2 in Azure Arc-enabled Kubernetes to run and manage the sample Oracle WebLogic Server cluster.
 
+## Contents
+
+- [Prerequisites](#prerequisites)
+- [Create GitOps from Azure portal](#create-gitops-from-azure-portal)
+- [Create GitOps with Azure CLI](#create-gitops-with-azure-cli)
+- [Validation](#validation)
+- [Demo Video](#demo-video)
+
 ## Prerequisites
 
 - An Azure Arc-enabled Kubernetes connected cluster that's up and running. See [Azure Arc-enabled Kubernetes](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/) for more information.
@@ -127,6 +135,38 @@ sample-domain1-ns             sample-domain1-managed-server1             1/1    
 sample-domain1-ns             sample-domain1-managed-server2             1/1     Running             0          71s
 ```
 
+## Create GitOps with Azure CLI
+
+You can also use Azure CLI command to enable the GitOps.
+
+Install the k8s-configuration Azure CLI extension of version >= 1.0.0:
+
+```bash
+az extension add --name k8s-configuration
+```
+
+Create a Flux v2 configuration:
+
+```bash
+
+# replace the Arc name and resource group name with yours
+export ARC_NAME=AzureArcTest1
+export RESOURGROUP_NAME=AzureArcTest
+
+az k8s-configuration flux create \
+  --name flux-system \
+  --cluster-name ${ARC_NAME} \
+  --resource-group ${RESOURGROUP_NAME} \
+  --namespace flux-system \
+  --url https://github.com/galiacheng/weblogic-aks-flux2-kustomize \
+  --branch main \
+  --scope cluster \
+  --cluster-type connectedClusters \
+  --kustomization name=kustomization1 path=clusters/onpremises prune=true
+```
+
+## Vaidation
+
 Verify that the Administration Server and the demo app can be accessed via ingress.
 
 
@@ -174,3 +214,7 @@ $ curl http://<ingress-address>/applications/testwebapp/
 </html>
 * Connection #0 to host 20.124.73.73 left intact
 ```
+
+## Demo Video
+
+[![Run this sample using Flux CLI](https://img.youtube.com/vi/4SzaStZAUaE/0.jpg)](https://www.youtube.com/watch?v=4SzaStZAUaE)
