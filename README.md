@@ -15,6 +15,7 @@ We will configure Flux:
  - [Use Flux CLI](#prerequisites)
    - [Prerequisites](#prerequisites)
    - [Bootstrap](#bootstrap)
+   - [Validation](#validation)
    - [Demo Video](#demo-video)
  - [Use GitOps in Azure Acr-enabled Kubernetes](resources/docs/azure-arc-gitops.md)
  - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
@@ -114,8 +115,8 @@ The Git repository contains the following top directories:
 ├── operator
 │   ├── kustomization.yaml
 │   ├── namespace.yaml 
-│   |── serviceaccount.yaml
-|   └── release.yaml
+│   ├── serviceaccount.yaml
+│   └── release.yaml
 ├── infrastructure
 │   ├── kustomization.yaml
 │   ├── namespace.yaml
@@ -301,6 +302,8 @@ sample-domain1-ns             sample-domain1-managed-server2             0/1    
 sample-domain1-ns             sample-domain1-managed-server1             1/1     Running             0          63s
 sample-domain1-ns             sample-domain1-managed-server2             1/1     Running             0          71s
 ```
+
+## Validation
 
 Verify that the Administration Server and the demo app can be accessed via ingress.
 
