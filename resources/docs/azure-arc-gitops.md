@@ -33,7 +33,7 @@ You are able to create the GitOps using the Azure portal.
 
 - **Kustomization**
   - Click **Create**
-    - **Path**: `clusters`
+    - **Path**: `clusters/onpremises`
     - **Prune**: `true`
     - Click **Save**
 - Click **Review + create**, you should find the information listed like:
