@@ -106,7 +106,7 @@ The Git repository contains the following top directories:
 - **ingress** dir contains Helm release for NGINX ingress controller.
 - **weblogic** dir contains custom resource definition of Oracle WebLogic Server cluster and the ingress.
 - **clusters**  dir contains the Flux configuration in AKS cluster
-- **azure-acr-gitops** dir contains documents that guides you to set up GitOps in Azure Arc-enable AKS cluster based on this sample.
+- **resources** dir contains documents that guides you to set up GitOps in Azure Arc-enable AKS cluster based on this sample.
 
 ```text
 ├── operator
@@ -122,7 +122,7 @@ The Git repository contains the following top directories:
 │   ├── wko-kustomization.yaml
 │   ├── ingress-kustomization.yaml 
 │   └── wls-kustomization
-└── azure-acr-gitops
+└── resources
 ```
 
 In **clusters/wko-kustomization.yaml**, we have a HelmRelease for Oracle WebLogic Kubernetes Operator.
