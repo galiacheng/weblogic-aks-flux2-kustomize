@@ -382,7 +382,7 @@ $ curl http://<ingress-address>/applications/testwebapp/ --verbose
 
 ## Demo Video
 
-[![Run this sample using Flux CLI]]({https://github.com/galiacheng/weblogic-aks-flux2-kustomize/resources/medias/flux-cli.mp4} "Run this sample using Flux CLI")
+[![Run this sample using Flux CLI](https://img.youtube.com/vi/0e1No3q5DMI/0.jpg)](https://www.youtube.com/watch?v=0e1No3q5DMI)
 
 ## Encrypt Kubernetes Secret using SOPS and Azure Key Vault
 
