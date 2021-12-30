@@ -105,7 +105,9 @@ The Git repository contains the following top directories:
 - **operator** dir contains Helm releases for Oracle WebLogic Kubernetes Operator.
 - **ingress** dir contains Helm release for NGINX ingress controller.
 - **weblogic** dir contains custom resource definition of Oracle WebLogic Server cluster and the ingress.
-- **clusters**  dir contains the Flux configuration in AKS cluster
+- **clusters**  dir contains the Flux configuration in AKS cluster. 
+  - **azure**: dir contains the Flux configuration in AKS cluster on Azure.
+  - **onpremises**: dir contains the Flux configuration in Kubernetes connected with Azure Arc-enabled Kubernetes. You can run your Kubernetes cluster on-premises or on other cloud provider that Azure Arc support.
 - **resources** dir contains documents that guides you to set up GitOps in Azure Arc-enable AKS cluster based on this sample.
 
 ```text
@@ -119,9 +121,14 @@ The Git repository contains the following top directories:
 │   ├── namespace.yaml
 │   └── release.yaml
 ├── clusters
-│   ├── wko-kustomization.yaml
-│   ├── ingress-kustomization.yaml 
-│   └── wls-kustomization
+│   ├── azure
+│   │   ├── wko-kustomization.yaml
+│   │   ├── ingress-kustomization.yaml 
+│   │   └── wls-kustomization
+│   └── onpremises
+│       ├── wko-kustomization.yaml
+│       ├── ingress-kustomization.yaml 
+│       └── wls-kustomization
 └── resources
 ```
 
@@ -213,7 +220,7 @@ flux bootstrap github \
     --repository=${GITHUB_REPO} \
     --branch=main \
     --personal \
-    --path=clusters
+    --path=clusters/azure
 ```
 
 The bootstrap command commits the manifests for the Flux components in clusters/flux-system dir and creates a deploy key with read-only access on GitHub, so it can pull changes inside the cluster.

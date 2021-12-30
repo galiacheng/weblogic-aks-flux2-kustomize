@@ -14,10 +14,10 @@ You are able to create the GitOps using the Azure portal.
 
 - Open your Azure Arc cluster, and click **Settings** -> **GitOps** -> **Create** -> Select **Flux version 2**
 
-    ![Create GitOps in Azure Arc-enabled AKS cluster](resources/screenshot-gitops-create.png)
+    ![Create GitOps in Azure Arc-enabled AKS cluster](../pictures/screenshot-gitops-create.png)
 
 - **Basics**
-  - **Configurations name**: input a name identifying your deployment, here uses `deploy-wls`
+  - **Configurations name**: `flux-system`
     
   - **Operator Details**: configuration for Flux operator
     - **Namespace**: `flux-system`, to keep the sample with Flux CLI.
@@ -38,7 +38,20 @@ You are able to create the GitOps using the Azure portal.
     - Click **Save**
 - Click **Review + create**, you should find the information listed like:
 
-    ![Review + create](resources/screenshot-review.png)
+    ![Review + create](../pictures/screenshot-review.png)
+
+Note that if you want to specify your own **Configurations name**, please fork this repository, change `sourceRef.name` in those files and push them to your fork, specify the **Repository URL** with your fork URL: 
+  - ingress-kustomization.yaml
+  - wko-kustomization.yaml
+  - wls-kustomization.yaml.
+
+The GitOps extension will name the source with that **Configurations name**, for example, if you name it with `weblogic`, then you will find the source name is `weblogic`:
+
+```bash
+$ flux get source git -A
+NAMESPACE       NAME            READY   MESSAGE                                                         REVISION                                        SUSPENDED
+flux-system     weblogic        True    Fetched revision: main/d980378cfd69e4544e1b238b939cf0ab4417cdfe main/d980378cfd69e4544e1b238b939cf0ab4417cdfe   False
+```
 
 It takes about 3 minutes to deploy the GitOps extension.
 
