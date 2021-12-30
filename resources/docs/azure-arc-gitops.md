@@ -165,7 +165,7 @@ az k8s-configuration flux create \
   --kustomization name=kustomization1 path=clusters/onpremises prune=true
 ```
 
-## Vaidation
+## Validation
 
 Verify that the Administration Server and the demo app can be accessed via ingress.
 
