@@ -18,7 +18,7 @@ We will configure Flux:
    - [Validation](#validation)
    - [Demo Video](#demo-video)
  - [Use GitOps in Azure Acr-enabled Kubernetes](resources/docs/azure-arc-gitops.md)
- - [Encrypt Kubernetes using SOPS and Azure Key Vault](#encrypt-kubernetes-using-sops-and-azure-key-vault)
+ - [Encrypt Kubernetes Secret using SOPS and Azure Key Vault](#encrypt-kubernetes-secret-using-sops-and-azure-key-vault)
 
 
 ## Prerequisites
