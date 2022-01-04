@@ -117,10 +117,18 @@ The Git repository contains the following top directories:
 │   ├── namespace.yaml 
 │   ├── serviceaccount.yaml
 │   └── release.yaml
-├── infrastructure
+├── ingress
 │   ├── kustomization.yaml
 │   ├── namespace.yaml
 │   └── release.yaml
+├── weblogic
+│   ├── kustomization.yaml
+│   ├── namespace.yaml
+│   ├── wdt-runtime-secret.yaml
+│   ├── weblogic-account-secret.yaml
+│   ├── domain.yaml
+│   ├── ingress-admin.yaml
+│   └── ingress-cluster.yaml
 ├── clusters
 │   ├── azure
 │   │   ├── wko-kustomization.yaml
