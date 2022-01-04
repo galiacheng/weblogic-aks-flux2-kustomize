@@ -1,4 +1,4 @@
-# Use Gitops to run Oracle WebLogic Server on Azure Azure Arc-enabled Kubernetes
+# Use Gitops to run Oracle WebLogic Server on Azure Arc-enabled Kubernetes
 
 This sample is using Flux and Kustomize to create and manage Oracle WebLogic Cluster on Azure Kubernetes Service cluster automatically.
 
